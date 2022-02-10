@@ -14,7 +14,7 @@ public class Week8_First {
 			Arrays.fill(a[i], 500001);
 		}
 		
-		// 자기 자신에게 가는데 걸리는 시간은 0으로 변
+		// 자기 자신에게 가는데 걸리는 시간은 0
 		for(int i = 0; i < N; i++) {
 			a[i][i] = 0;
 		}

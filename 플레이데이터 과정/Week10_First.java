@@ -10,7 +10,7 @@ import java.util.Stack;
 public class Week10_First {
 	public int solution(int[] priorities, int location) {
         Queue<Integer> prQue = new LinkedList<Integer>();
-		Stack<Integer> maxQue = new Stack<Integer>();
+		Stack<Integer> maxPri = new Stack<Integer>();
 		int answer = 0;
 		
 		// 인쇄대기목록을 순서대로 queue에 넣음
@@ -21,16 +21,16 @@ public class Week10_First {
 		// 인쇄대기목록을 정렬하여 Stack에 넣음
 		Arrays.sort(priorities);
 		for(int i : priorities) {
-			maxQue.push(i);
+			maxPri.push(i);
 		}
 		
 		while(!prQue.isEmpty()) {
 			// 중요도 순으로 내림차순 정렬된 Stack의 경우 가장 위에 쌓인 수가 중요도가 제일 높음을 의미
-			int max = maxQue.peek();
+			int max = maxPri.peek();
 			// 이번 순서의 인쇄대기물의 중요도가 max 중요도와 같다면 해당 인쇄물을 뽑음
 			if(prQue.peek() == max) {
 				prQue.poll();
-				maxQue.pop();
+				maxPri.pop();
 				answer++;
 				// 만약 내가 요청한 문성의 위치가 0이라면 뽑힌 것을 의미
 				if(location == 0) {

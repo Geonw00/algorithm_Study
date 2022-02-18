@@ -36,6 +36,6 @@ public class Week10_Second {
 				answer ++;
 			}	
 		}
-        return answer;
-    }
+    		return answer;
+	}
 }

@@ -8,8 +8,8 @@ public class Week10_Second {
 	public int solution(int[] scoville, int K) {
 		int answer = 0;
         
-        	// 큐에 들어간 수들은 정렬되어 있지 않지만 poll, peek 같은 경우 우선순위가 높은 숫자들을 대상으로 처리가 이루어진다.
 		// priorityQueue 는 우선순위 큐로써 기본형은 낮은 숫자부터 우선순위가 부여된다.
+		// 높은 숫자부터 우선순위를 부여하기 위해서는 new PriorityQueue<>(Collections.reverseOrder())가 필요하다.
 		// 큐에 들어간 수들은 정렬되어 있지 않지만 poll, peek을 실행할 경우 우선순위가 높은 숫자들을 대상으로 처리가 이루어진다.
 		PriorityQueue<Integer> scDqu = new PriorityQueue<Integer>();
 		

@@ -27,17 +27,17 @@ public class Week10_Third {
 	    		// 만약 삭제할 숫자가 없을 경우 해당 명령 스킵
 	    		if(sortOp.size() == 0) {
 	    	        continue;
-	    	    }
+	    		}
 	    		
 	    		// 정렬된 sortOp의 마지막 인덱스는 최댓값을 의미
 	    		if(spOP[1].equals("1")) {
             		sortOp.remove(sortOp.size()-1);
-                }
+                	}
 	    		
 	    		// 정렬된 sortOp의 첫 인덱스는 최솟값을 의미
-            	else if(spOP[1].equals("-1")) {
+            		else if(spOP[1].equals("-1")) {
             		sortOp.remove(0);
-                }
+                	}
 	    	}
 	    }
         

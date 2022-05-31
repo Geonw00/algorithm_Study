@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class baekjoon_15591 {
+	public static List<int[]>[] usadoGraph;
 	public static boolean[] visitCk;
 	public static int k;
 	
